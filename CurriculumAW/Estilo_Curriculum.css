@@ -1,0 +1,19 @@
+#Logo {float:left; margin-left:10px;}
+.cont {margin-left:90px;}
+nav {text-align:center; background-color: yellow;}
+.shadowbox {width: 40em;
+        border: 1px solid #333;
+        box-shadow: 8px 8px 5px #444;
+        padding: 8px 12px;
+        background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);    
+    }
+a {color:black; text-decoration:none;}
+#exp {margin-bottom: 10px; margin-left:40px;}
+#Principal {background-color:white;}
+#Secundario {background-color:white;}
+h1 {text-align: center;}
+#Cabecera {background-color:lightsalmon;}
+#foot {text-align:center;}
+#formacion {float: left; margin-left:2.5px;}
+#idiomas {float:right; margin-right:2.5px;}
+#tit_sec {padding-top: 10px; margin-left:10px;}

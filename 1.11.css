@@ -1,0 +1,6 @@
+h1 {text-align: center;}
+.izquierda {float: left;}
+.derecha {float: right;}
+span {color:red;}
+fieldset {margin-left:20%;
+margin-right:20%;}

@@ -1,0 +1,1 @@
+print(bin.__dir__)

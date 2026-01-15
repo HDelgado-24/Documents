@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Alta</title>
+    <link rel="stylesheet" href="1.11.css">
+</head>
+<body>
+    <h1>Formulario de Alta</h1>
+    <form action="#">
+    <fieldset>
+        <div class="izquierda">
+            <label for="fullname">Nombre y apellidos <span>*</span></label><br>
+            <input class="basic-input" type="text" placeholder="Nombre" required><br>
+            <input class="basic-input" type="text" placeholder="Primer Apellido" required><br>
+            <input class="basic-input" type="text" placeholder="Segundo Apellido" required><br>
+            <br><br>
+            <label for="email">Email <span>*</span></label><br>
+            <input class="basic-input" type="email" placeholder="ejemplo@email.com"><br>
+        </div>
+        <div class="derecha">
+            <label for="address">Dirección <span>*</span></label><br>
+            <input class="basic-input" type="text" placeholder="Calle, número, piso, puerta"><br>
+            <input class="basic-input" type="text" placeholder="Código postal: 00000"><br>
+            <input type="text" placeholder="Municipio"><br>
+            <select name="provincia" id="provincia">
+                <option value="provincia">Provincia</option>
+                <option value="baleares">Baleares</option>
+                <option value="valencia">Valencia</option>
+            </select>
+            <select name="pais" id="pais">
+                <option value="pais">País</option>
+                <option value="espana">España</option>
+                <option value="portugal">Portugal</option>
+            </select><br>
+            <label for="phone">Teléfono <span>*</span></label><br>
+            <input class="basic-input" type="text" placeholder="Fijo">
+            <input class="basic-input" type="text" placeholder="Móvil"><br>
+            
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <input type="submit" value="Enviar">
+    </fieldset>
+    </form>
+</body>
+</html>

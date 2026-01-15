@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú-Moreno's Pizza</title>
+    <meta name="Author" content="Hugo Delgado Moreno">
+    <link rel="stylesheet" href="../CSS/MorenosPizza.css">
+</head>
+<body>
+    <nav>
+        <p><a class="menu" target="_blank" href="Inicio.html">Inicio</a> | <a class="menu" target="_blank" href="menu.html">Menú</a></p>
+    </nav>
+    <form action="#">
+        <fieldset>
+        <legend>¡Pide tu Pizza!</legend>
+        <label for="toppings">Extras</label><br>
+        <input type="checkbox"><label for="pepperoni">Pepperoni</label><br>
+        <input type="checkbox"><label for="pineapple">Piña</label><br>
+        <input type="checkbox"><label for="pepper">Pimientos</label><br>
+        <input type="checkbox"><label for="mushrooms">Champiñones</label><br>
+        <input type="checkbox"><label for="corn">Maíz dulce</label><br>
+        <input type="checkbox"><label for="bacon">Beicon</label><br>
+        <input type="checkbox"><label for="shrimps">Gambas</label><br>
+        <br>
+        <label for="size">Tamaño <span>*</span></label><br>
+        <input type="radio"><label for="small">Pequeña</label><br>
+        <input type="radio"><label for="medium">Mediana</label><br>
+        <input type="radio"><label for="big">Familiar</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de Dirección</legend>
+            <label for="fullname">Nombre<span>*</span></label>
+            <input type="text" required><br><br>
+            <label for="address">Dirección<span>*</span></label>
+            <input type="text" required placeholder="Tipo de vía, nombre de la vía, bloque, número, portal, piso, puerta."><br>
+            <br>
+            <select name="country" id="country">
+            <option value="spain">España</option>
+            <option value="germany">Alemania</option>
+            <option value="luxemburg">Luxemburgo</option>
+            </select><br><br>
+            <label for="phone">Teléfono </label><input type="text"><br><br>
+            <label for="special">Instrucciones Especiales:</label><br>
+            <textarea name="specialinstructions" id="special" rows="10" cols="70"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Métodos de pago</legend>
+            <Select>
+                <option value="cash">Efectivo</option>
+                <option value="card">Tarjeta</option>
+            </Select>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar" style="margin-left: 20%;">
+    </form>
+    <footer><p><a href="#">M's P</a> | <a href="#">Aviso legal</a> | <a href="#">Cookies</a></p></footer>
+</body>
+</html>

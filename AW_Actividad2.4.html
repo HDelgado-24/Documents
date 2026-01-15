@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica DOM Sencilla</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .seccion {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .boton {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .boton:hover {
+            background: #45a049;
+        }
+
+        .caja {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+
+        .ejemplo {
+            color: blue;
+            font-weight: bold;
+        }
+
+        #listaElementos {
+            list-style-type: none;
+        }
+
+        #listaElementos li {
+            padding: 8px;
+            margin: 5px 0;
+            background: #e9e9e9;
+            border-radius: 4px;
+        }
+
+        .nuevo-div {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .bold{
+            font-weight: bold;
+            color: red;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .wo_bold{
+            font-weight: 500;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎮 Práctica Sencilla de Manipulación DOM</h1>
+
+    <!-- Sección 1: Buscar por ID -->
+    <div class="seccion">
+        <h2>1️⃣ Buscar por ID, y realia las dos funciones.</h2>
+        <p id="textoEjemplo">Este texto será modificado cuando hagas clic.</p>
+        <button class="boton" onclick="cambiarTexto()">Cambiar Texto</button>
+        <button class="boton" onclick="restaurarTexto()">Restaurar Texto</button>
+    </div>
+
+    <!-- Sección 2: Buscar por Clase -->
+    <div class="seccion">
+        <h2>2️⃣ Buscar por Clase, y realia las dos funciones.</h2>
+        <p class="ejemplo">Primer párrafo con clase "ejemplo"</p>
+        <p class="ejemplo">Segundo párrafo con clase "ejemplo"</p>
+        <p class="ejemplo">Tercer párrafo con clase "ejemplo"</p>
+        <button class="boton" onclick="cambiarColorClases()">Cambiar Color</button>
+        <button class="boton" onclick="restaurarClases()">Restaurar Color</button>
+    </div>
+
+    <!-- Sección 3: Crear Divs con Colores Aleatorios -->
+    <div class="seccion">
+        <h2>3️⃣ Crear Divs con Colores Aleatorios.</h2>
+        <p>Cada div estará dentro del contenedor divs y tendrá un color aleatorio.</p>
+        <div id="contenedorDivs"></div>
+        <br>
+        <button class="boton" onclick="crearDiv()">Crear 1 Div</button>
+        <button class="boton" onclick="crear5Divs()">Crear 5 Divs</button>
+        <button class="boton" onclick="limpiarDivs()">Limpiar Todo</button>
+    </div>
+
+    <!-- Sección 4: Modificar Lista -->
+    <div id="lista" class="seccion">
+        <h2>4️⃣ Modificar Lista</h2>
+        <ul id="listaElementos">
+            <li>Manzana 🍎</li>
+            <li>Plátano 🍌</li>
+            <li>Naranja 🍊</li>
+        </ul>
+        <input type="text" id="nuevoItem" placeholder="Escribe un nuevo elemento de lista">
+        <button class="boton" onclick="agregarItem()">Agregar elemento a la lista</button>
+        <button class="boton" onclick="eliminarUltimo()">Eliminar último elemento de la lista</button>
+    </div>
+
+    <!-- Sección 5: Cajas Interactivas -->
+    <div class="seccion">
+        <h2>5️⃣ Cajas Interactivas</h2>
+        <p>Cada caja no se eliminará, se esconderá y se mostrará dependiendo si paso por encima de la caja con el mouse o no.</p>
+        <div class="caja" id="caja1" onmouseover="esconderCaja1()" onmouseout="mostrarCaja1()">Caja 1</div>
+        <div class="caja" id="caja2" onmouseover="esconderCaja2()" onmouseout="mostrarCaja2()">Caja 2</div>
+        <div class="caja" id="caja3" onmouseover="esconderCaja3()" onmouseout="mostrarCaja3()">Caja 3</div>
+        <br><br>
+        <button class="boton" onclick="cambiarCajas()">Cambiar Colores</button>
+        <button class="boton" onclick="esconderCajas()">Esconder/Mostrar</button>
+    </div>
+
+    <script>
+        // =========== SECCIÓN 1: Buscar por ID ===========
+// 1. Buscar elemento por su ID
+const textoEjemplo = document.getElementById("textoEjemplo");
+// 2. Verificar que existe
+// 3. Cambiar su contenido
+function cambiarTexto() {
+    textoEjemplo.classList.add("bond");
+}
+function restaurarTexto() {
+    textoEjemplo.classList.add("wo_bond");
+}
+// Quitar color
+// Quitar negrita
+// =========== SECCIÓN 2: Buscar por Clase ===========
+// 1. Buscar TODOS los elementos con clase "ejemplo"
+    const ejemplo = document.getElementsByClassName("ejemplo");
+// 2. Recorrer la colección (no es un array, es HTMLCollection)
+    function cambiarColorClases() {
+    for (let i =0; i< ejemplo.length; i++) {
+    ejemplo[i].classList.add("bold");
+    }
+}
+    function restaurarClases() {
+    for (let i =0; i< ejemplo.length; i++) {
+    ejemplo[i].classList.remove("bold");
+    }
+}
+// 3. Cambiar propiedades de cada elemento
+// =========== SECCIÓN 3: Crear Divs con Colores Aleatorios ===========
+const contenedorDivs = document.getElementById("contenedorDivs");
+function generarColorAleatorio() {
+// Generar un color hexadecimal aleatorio
+const letras = '0123456789ABCDEF';
+let color = '#';
+for (let i = 0; i < 6; i++) {
+color += letras[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+    function crearDiv() {
+    const diva = document.createElement("div");
+    diva.textContent = "Esta es una sección de contenedor div.";
+    contenedorDivs.appendChild(diva);
+    diva.style.backgroundColor=generarColorAleatorio();
+    diva.style.color="white";
+}
+    function crear5Divs() {
+    for (let i=0; i<5; i++) {
+        const diva = document.createElement("div");
+        diva.textContent = "Esta es una sección de contenedor div.";
+        contenedorDivs.appendChild(diva);
+        diva.style.backgroundColor=generarColorAleatorio();
+        diva.style.color="white";
+    }
+}
+    function limpiarDivs() {
+    contenedorDivs.innerHTML = "";
+}
+// 1. Buscar el contenedor
+// 2. Crear un nuevo elemento div
+// 3. Configurar propiedades del div
+// 4. Asignar color aleatorio
+// Texto blanco para mejor contraste
+// 5. Añadir evento de clic
+// 6. Insertar en el contenedor
+// Vaciar todo el contenido
+// =========== SECCIÓN 4: Modificar Lista ===========
+// 1. Obtener valor del input
+        
+// 2. Validar que no esté vacío
+        function agregarItem(){
+            const nuevoItem = document.getElementById("nuevoItem");
+            const emojis = ['🍎', '🍌', '🍊', '🍇', '🍓', '🍉', '🥭', '🍍'];
+            const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)];
+            const listaElementos = document.getElementById("listaElementos");
+            if (nuevoItem.value==="") {
+                alert("EL elemento no puede estar vacío.");
+            } else {
+                const li = document.createElement("li");
+                li.innerHTML= nuevoItem.value + emojiAleatorio;
+                listaElementos.appendChild("li");
+                nuevoItem.value="";
+            }
+            
+        }
+        function eliminarUltimo(){
+           const li = listaElementos.length;
+           let ultimo = li - 1;
+
+        }
+// 3. Buscar la lista
+// 4. Crear nuevo elemento de lista
+// 5. Añadir emoji aleatorio
+// 6. Añadir evento para eliminar al hacer doble clic
+// 7. Insertar en la lista
+// 8. Limpiar el input
+// Poner el cursor de nuevo en el input
+// =========== SECCIÓN 5: Cajas Interactivas ===========
+// Cambiar colores de las 3 cajas
+// Cambiar también el color del texto para que sea visible
+// =========== EJERCICIOS ADICIONALES ===========
+// PRÁCTICA: Cambiar el título principal (h1)
+// 1. Buscar el elemento h1
+// 2. Cambiar su texto a "¡DOM Manipulado!"
+// 3. Cambiar su color a morado (#8A2BE2)
+// PRÁCTICA: Contar cuántos divs hay en la página
+// 1. Buscar todos los divs
+// 2. Mostrar un alert con el número total
+// PRÁCTICA: Crear un botón que alerte el texto de todos los párrafos
+// 1. Buscar todos los párrafos (etiqueta <p>)
+// 2. Recorrerlos y concatenar sus textos
+// 3. Mostrar el resultado en un alert
+        const caja1 = document.getElementById("caja1");
+        const caja2 = document.getElementById("caja2");
+        const Caja3 = document.getElementById("caja3");
+        function esconderCaja1(){
+            caja1.style.color="white";
+            caja1.style.border="white";
+        }
+        function mostrarCaja1(){
+            caja1.style.color="black";
+            caja1.style.border="2px solid black";
+            caja1.style.bo
+        }
+        function esconderCaja2(){
+            caja2.style.color="white";
+            caja2.style.border="white";
+            caja2.style.backgroundColor="white";
+        }
+        function mostrarCaja2(){
+            caja2.style.color="black";
+            caja2.style.border="black";
+        }
+        function esconderCaja3(){
+            caja3.style.color="white";
+            caja3.style.border="white";
+            caja3.style.backgroundColor="white";
+        }
+        function mostrarCaja3(){
+            caja3.style.color="black";
+            caja3.style.border="black";
+        }
+        function cambiarCajas(){
+            const cajas = document.querySelectorAll(".caja");
+            for (let i = 0; i < cajas.length; i++) {
+                cajas[i].style.backgroundColor = generarColorAleatorio();
+            }
+        }
+    </script>
+</body>
+</html>
+
+        

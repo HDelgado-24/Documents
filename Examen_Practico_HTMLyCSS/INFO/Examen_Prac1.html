@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Práctico</title>
+    <meta name="author" content="Hugo Delgado Moreno">
+    <link rel="stylesheet" href="..\CSS\EstiloExamen1.css">
+    <style>
+        #interno {color: darkblue;}
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Examen Práctico Tema 1</h1>
+    </div>
+    <nav id="menu">
+        <p class="menu"><a target="_blank" class="menu" href="Examen_Prac1.html">Inici</a> | <a target="_blank" class="menu" href="Actividades.html">Exrcecicis</a> | <a target="_blank" class="menu" href="#">Contacte</a></p>
+    </nav>
+    <br>
+    <div class="principal">
+        <br>
+        <h2>HTML</h2>
+        <p>Lenguaje de programación que permite insertar y ordenar información presentada en una página web estática.</p>
+    <br>
+    </div>
+    <br><br>
+    <div class="secundario">
+        <br>
+        <h2>CSS</h2>
+        <ol>
+            <li id="externo">Externo</li>
+            <ul>
+                <li>Menor prioridad</li>
+                <li>Se incluye con el uso de la etiqueta "link", haciendo referencia a un archivo .css externo, en el "head"</li>
+            </ul>
+            <li id="interno">Interno</li>
+            <ul>
+                <li>Mayor prioridad que externo, menor que en línea</li>
+                <li>Se incluye con el uso de la etiqueta "style" dentro de "head"</li>
+            </ul>
+            <li style="color:crimson;">En línea</li>
+            <ul>
+                <li>Mayor prioridad</li>
+                <li>Se incluye con el atributo "style=" en la etiqueta que se desea emplear</li>
+            </ul>
+        </ol>
+        <br>
+    </div>
+    <footer>
+        <p>Hugo Delgado Moreno | <a class="foot" href="#">Aviso Legal</a> | <a class="foot" href="#">Cookies</a></p>
+    </footer>
+</body>
+</html>

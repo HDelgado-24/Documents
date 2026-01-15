@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <meta name="author" content="Hugo Delgado Moreno">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+<body>
+    <header>
+        <br>
+        <h1>Realiza tu Pedido Personalizado</h1>
+        <h3>Selecciona tus preferencias para completar tu pedido</h3>
+    <br>
+    </header>
+    <nav><p><a href="inicio.html">Inicio</a> | <a href="reserva.html">Formalizar reserva</a></p></nav>
+    <div class="prin">
+       <table>
+        <tr>
+            <td><img src="../Img/libro1.jpg" alt="Libro programación" width="120px" height="180px"></td>
+            <td><img src="../Img/libro2.jpg" alt="Libro Python" width="120px" height="180px"></td>
+            <td><img src="../Img/libro3.jpg" alt="Libro Java" width="120px" height="180px"></td>
+        </tr>
+        <tr>
+            <th>Libro 1</th>
+            <th>Libro 2</th>
+            <th>Libro 3</th>
+        </tr>
+       </table>
+    </div>
+    <form action="#">
+        <fieldset>
+            <label for="name">Nombre:</label><br>
+            <input type="text" required><br>
+            <br>
+            <label for="product">Producto:</label><br>
+            <Select required>
+                <option value="none">Selecciona un producto</option>
+                <option value="program">Libro Programación</option>
+                <option value="python">Libro Python</option>
+                <option value="java">Libro Java</option>
+            </Select><br><br>
+            <label for="size">Tamaño:</label><br>
+            <input type="radio" name="small"> <label for="small">Pequeño</label>
+            <input type="radio" name="medium"> <label for="medium">Mediano</label>
+            <input type="radio" name="large"> <label for="large">Grande</label><br><br>
+            <label for="extras">Extras:</label><br>
+            <input type="checkbox"> <label for="web">web</label>
+            <input type="checkbox"> <label for="apps">aplicaciones</label>
+            <input type="checkbox"> <label for="ecommerce">ecommerce</label><br><br>
+            <label for="comments">Comentarios adicionales:</label><br>
+            <textarea name="comments" id="comments" ></textarea><br><br>
+            <input type="submit" value="Enviar Pedido">
+        </fieldset>
+    </form>
+    <footer><p><a href="#">© 2025</a> - <a href="#">Sistema de Pedidos de Hugo Delgado</a></p></footer>
+</body>
+</html>
