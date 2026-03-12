@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="foto-perfil" src="" alt="">
+    <button id="btn-desactivar">Hola</button>
+    
+    <script>
+        const fotoPerfil = document.getElementById("foto-perfil");
+        fotoPerfil.src = "nueva-foto.png"; /*Corregido quitando el .attribute */
+
+        function verificarEdad() {
+            let edad = (prompt("¿Cuál es tu edad?"));
+            if (edad >= 18) {
+                alert("Eres mayor de edad");
+            } else {
+                alert("Eres menor de edad");
+            }
+        }
+        verificarEdad();
+
+        const botonDesact = document.getElementById("btn-desactivar");
+        botonDesact.addEventListener("click", function(){
+            botonDesact.innerText = "Desactivado";
+            botonDesact.setAttribute("disabled", "");   /*Corregido el desactivar el botón*/
+        })
+        
+    </script>
+</body>
+</html>
